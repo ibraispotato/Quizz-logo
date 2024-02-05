@@ -1,0 +1,107 @@
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0,100%);
+    }
+    .box{
+        background-color: white;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* cursor: pointer; */
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(var(--rotate-y,0));
+        transition: 150ms;
+    }
+
+    .theH1{
+        cursor: pointer;
+        text-align: center;
+        font-size: 25px;
+        border: none;
+        color: black;
+        font-weight: 700;
+        transform: perspective(1000px) rotateY(var(--rotate-y,0));
+
+        background-color: transparent;
+    }
+    button{
+        transform: perspective(1000px) rotateY(var(--rotate-y,0));
+
+    }
+    .btns.change{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .Mainbtn{
+        padding: 5px 15px;
+        font-size: 20px;
+        font-weight: 500;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .Mainbtn:hover{
+        border: 1px solid rgb(0, 255, 0);
+        color: rgb(0, 255, 0);
+    }
+    a{
+        width: 68.7px;
+    }
+    
+    .box.change{
+        /* position: absolute; */
+        background-color: black;
+        color: white;
+        transform: rotateY(180px);
+        --rotate-y:-180deg;
+    /* backface-visibility: hidden; */
+    }
+    .btn{
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border: black 1px solid;
+    background-color: transparent;
+    cursor: pointer;
+    
+    }
+    .btn.easy{
+    border: rgb(3, 255, 3) 1px solid;
+        color: green;
+    }
+
+    .btn.medium{
+        border: rgb(3, 217, 255) 1px solid;
+        color: rgb(3, 217, 255);
+    }
+
+    .btn.hard{
+        border: rgb(255, 3, 3) 1px solid;
+        color: rgb(255, 0, 0);
+    }
+    .allBtns{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+@media(max-width:425px){
+.hero{
+    transform: translate(0,60%);
+
+}
+}
